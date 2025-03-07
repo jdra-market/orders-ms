@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY # Opcional: Define el tipo de logging
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
@@ -16,6 +19,3 @@ steps:
         'push',
         'northamerica-northeast1-docker.pkg.dev/jdra-market-452916/jdra-images-registry/orders-ms',
       ]
-options:
-  logging: CLOUD_LOGGING_ONLY # Opcional: Define el tipo de logging
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
